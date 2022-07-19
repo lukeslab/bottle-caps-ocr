@@ -88,7 +88,7 @@ MongoClient.connect(cluster)
         const formData = require('form-data');
         const multer = require('multer');
         const uploadTrainingImages = multer({
-            dest: path.join(__dirname, "/images/training")
+            dest: path.join(__dirname, "public/images/training")
         });
         
         app.post('/uploadImage',
