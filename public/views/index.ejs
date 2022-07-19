@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h2>Create Caps</h2>
+    <form action="/addCokeCaps" method="POST">
+        <fieldset>
+            <label for="code">Cap Code</label>
+            <input name="code" type="text">
+            <input name="status" value="new" type="hidden">
+            <button>Add Cap</button>
+        </fieldset>
+    </form>
+
+    <h2>Read Coke Caps</h2>
+
+    <ul>    
+        <% for (i=0; i < cokeCaps.length; i++) { %>
+        <li><%= cokeCaps[i].code;%> <%= cokeCaps[i].status %></li>
+        <% } %>
+    </ul>
+
+    <h2>Update Coke Cap</h2>
+    <form action="/updateCokeCap" method="POST">
+        <fieldset>
+            <label for="code">Cap Code</label>
+            <input name="code" type="text">
+            <label for="status">Status</label>
+            <select name="status" id="">
+                <option value="image uploaded">Image uploaded</option>
+                <option value="scanned">Scanned</option>
+                <option value="claimed">Claimed</option>
+            </select>
+            <button>Update Cap</button>
+        </fieldset>
+    </form>
+    
+    <h2>Delete Coke Cap</h2>
+    <form action="/deleteCokeCap" method="POST">
+        <fieldset>
+            <label for="code">Cap Code</label>
+            <input name="code" type="text">
+            <button>Delete Cap Code</button>
+        </fieldset>
+    </form> -->
+
+    <h1>Nanonets API</h1>
+    <fieldset>
+        <legend>Model List</legend>
+        <div>
+            <form action=""></form>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Image Library</legend>
+        <div class="gallery">
+            <% 
+            console.log(files)
+            if(files) {
+                for (file of files) { %>
+                    <img src="/images/training/<%= file %>" alt="">
+            <%  } 
+            } %>
+            </div>
+    </fieldset>
+    <form id="nanonetsApi" action="/">
+        <fieldset>
+            <legend>Choose an action:</legend>
+            <input type="radio" id="createNewModel" name="actions">
+            <label for="createNewModel">Create New Model</label>
+            <input type="radio" id="uploadTrainingImage" name="actions">
+            <label for="uploadTrainingImage">Upload Image Files</label>
+            <input type="radio" id="trainModel" name="actions">
+            <label for="trainModel">Train Model</label>
+        </fieldset>
+        <fieldset>
+            <legend>Enter required fields:</legend>
+            <label id="modelID">Model ID
+                <input name="modelID" type="text">
+            </label>
+            <label id="categories">Categories
+                <input name="categories" type="text">
+            </label>
+            <label for="trainingImage">Select Image File
+                <input type="file" multiple="multiple" name="trainingImage">
+            </label>
+            <button>Submit</button>
+        </fieldset>
+    </form>
+    <fieldset>
+        <legend>Output:</legend>
+    </fieldset>
+    <!-- <h2>Create New Model</h2>
+    <form action="/createNewModel" method="POST">
+        <fieldset>
+            <label for="categories">Categories</label>
+            <input type="text" name="categories">
+            <button>Submit</button>
+        </fieldset>
+    </form> -->
+
+    <!-- <h2>Read Model By ID</h2>
+    <form action="/getModelByID">
+        <fieldset>
+            <label for="modelID">Model ID</label>
+            <input type="text" name="modelID">
+            <button>Submit</button>
+        </fieldset>
+    </form> -->
+
+    <!-- <form action="/uploadTrainingImage" enctype="multipart/form-data" method="post">
+        <fieldset>
+            <label for="modelID">Model ID</label>
+            <input type="text" name="modelID"><br>
+            <label for="trainingImage">Select image file</label><br>
+            <input type="file" multiple="multiple" name="trainingImage">
+            <button>Submit</button>
+        </fieldset>
+    </form> -->
+
+    <!-- <h2>Train Model</h2>
+    <p>Note: training images must be uploaded.</p>
+    <form action="/trainModelByID" method="post">
+        <fieldset>
+            <label for="modelID">Model ID</label>
+            <input type="text" name="modelID">
+            <button>Submit</button>
+        </fieldset>
+    </form> -->
+
+    <!-- <h2>Predict By Image File</h2>
+    <form action="/uploadPredictionImage" enctype="multipart/form-data" method="post">
+        <fieldset>
+            <label for="modelID">Model ID</label>
+            <input type="text" name="modelID"><br>
+            <label for="predictionImage">Select image file</label><br>
+            <input type="file" name="predictionImage">
+            <button>Submit</button>
+        </fieldset>
+    </form> -->
+
+    <!-- <h2>Get All Prediction Files</h2>
+    <form action="/getAllPredictionFiles">
+        <fieldset>
+            <label for="modelID">Model ID</label>
+            <input type="text" name="modelID">
+            <label for="start_day">Start Day</label>
+            <input type="date" name="start_day">
+            <label for="end_day">End Day</label>
+            <input type="date" name="end_day">
+            <button>Submit</button>
+        </fieldset>
+    </form> -->
+    <script src="main.js"></script>
+</body>
+</html>
