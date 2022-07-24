@@ -1,0 +1,15 @@
+*{
+    box-sizing: border-box;
+}
+
+.form-field {
+    display: flex;
+}
+
+.form-field label {
+    width: 15%;
+}
+
+img {
+    width: 20%;
+}
